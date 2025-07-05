@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### 1. GET ALL CONTACTS
+GET {{baseUrl}}/contacts
+Accept: {{contentType}}
+
+### 2. GET SINGLE CONTACT (Replace ID)
+@contactId = 68688b1d3008a9575b0f2b27
+GET {{baseUrl}}/contacts/{{contactId}}
+Accept: {{contentType}}
