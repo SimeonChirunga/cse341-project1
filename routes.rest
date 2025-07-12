@@ -5,7 +5,35 @@
 GET {{baseUrl}}/contacts
 Accept: {{contentType}}
 
-### 2. GET SINGLE CONTACT (Replace ID)
-@contactId = 68688b1d3008a9575b0f2b27
+### 2. GET SINGLE CONTACT 
+@contactId = 68688f2f3008a9575b0f2b28
 GET {{baseUrl}}/contacts/{{contactId}}
 Accept: {{contentType}}
+
+###Create contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Junior",
+"lastName": "Chirunga",
+"email": "juniochirunga@gmail.com",
+"favouriteColor": "purple",
+"birthday": "30 October 2014"
+}
+
+###Update contact
+PUT http://localhost:3000/contacts/650ec3db478024447d296b2c HTTP/1.1
+content-type: application/json
+
+  {
+ 
+    "firstName": "Shannon",
+    "lastName": "Chirunga",
+    "email": "shannonchirunga@gmail.com",
+    "favouriteColor": "brown",
+    "birthday": "30 October 2004"
+  }
+
+###Delete contact
+DELETE http://localhost:3000/contacts/68723b9449d8a5f178ccee4b HTTP/1.1
